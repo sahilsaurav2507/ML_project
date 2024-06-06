@@ -63,7 +63,14 @@ model = LinearRegression()
 model.fit(x_train, y_train) #fitting with trained data
 
 # features = [["total_bill","sex","smoker","day","time","size"]]
-features = np.array([[24.50,1,0,0,1,4]])
+total_bill = float(input("Enter total bill amount: "))
+sex = int(input("Enter 0 for Female, 1 for Male: "))
+smoker = int(input("Enter 0 for Non-smoker, 1 for Smoker: "))
+day = int(input("Enter 0 for Thur, 1 for Fri, 2 for Sat, 3 for Sun: "))
+time = int(input("Enter 0 for Lunch, 1 for Dinner: "))
+size = int(input("Enter party size: "))
+
+features = np.array([[total_bill, sex, smoker, day, time, size]])
 print(model.predict(features))
 
 
