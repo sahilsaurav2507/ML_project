@@ -46,5 +46,3 @@ Contributions are welcome Please feel free to submit a pull request or open an i
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-Save this content in a file named `README.md` in the root directory of your project. Markdown files are automatically formatted by GitHub and many other platforms, making them ideal for documentation.
