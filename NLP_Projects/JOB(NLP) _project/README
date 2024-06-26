@@ -1,0 +1,107 @@
+## step-by-step procedure to run the code i.e. JobSkillExt.py. 
+
+---
+
+# Job Skills Extractor
+
+This project processes job descriptions from a dataset and extracts relevant skills using Natural Language Processing (NLP) techniques. The final output is a CSV file containing job titles and their corresponding skills.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Data](#data)
+- [Input and Output](#input-and-output)
+- [Procedure to Run the Code](#procedure-to-run-the-code)
+- [Preprocessing](#preprocessing)
+- [Skills Extraction](#skills-extraction)
+- [Output](#output)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## Installation
+
+pip install -r requirements.txt
+```
+
+Ensure you have the NLTK data files downloaded:
+
+```python
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+```
+
+## Usage
+
+1. Place your dataset (CSV file) in the project directory. Update the file path in the code if necessary.
+2. Run the script:
+
+```python
+python script.py
+```
+
+This will generate a new CSV file with job titles and extracted skills.
+
+## Data
+dataset used here is   :https://www.kaggle.com/datasets/PromptCloudHQ/us-jobs-on-monstercom
+The dataset used in this project should be a CSV file containing job descriptions. The sample data file path used in the script is:
+
+```plaintext
+C:\Users\sahil\Desktop\proj\JOB(NLP)_project\monster_com-job_sample.csv
+```
+** please fell free to update it **
+
+## Input and Output
+
+### Input
+
+- **Input File:** A CSV file containing job descriptions.
+- **Input Column:** `job_description` - this column contains the text of the job descriptions to be processed.
+
+### Output
+
+- **Output File:** A CSV file named `monster_jobs_with_skills.csv`.
+- **Output Columns:**
+  - `job_title` - the title of the job.
+  - `skills` - a comma-separated list of skills extracted from the job description.
+
+## Procedure to Run the Code
+
+1. Provide the complete path of the CSV file (`monster_com-job_sample.csv`) in the script.
+2. Run the code by executing:
+
+```python
+python script.py
+```
+
+3. You will get the output CSV file named `monster_jobs_with_skills.csv` in the same directory.
+
+## Preprocessing
+
+Text preprocessing steps include:
+
+1. Converting text to lowercase.
+2. Removing non-alphabetic characters.
+3. Tokenizing the text.
+4. Removing stop words.
+5. Lemmatizing the tokens.
+
+## Skills Extraction
+
+A predefined list of skills is used to extract relevant skills from job descriptions. The extraction process involves:
+
+1. Converting the skills list to lowercase.
+2. Matching the skills list with tokens from the preprocessed text.
+
+## Output
+
+The final output is a CSV file named `monster_jobs_with_skills.csv`, containing job titles and their corresponding skills.
+
+## Acknowledgements
+
+- Thanks to the NLTK library for providing tools for text processing.
+- The project utilizes the Pandas library for data manipulation.
+
+---
