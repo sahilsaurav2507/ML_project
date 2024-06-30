@@ -1,6 +1,4 @@
-Sure, here is a simpler version of the project description for your `readme.md` file:
 
----
 
 ## Job Skills Prediction using NLP
 
